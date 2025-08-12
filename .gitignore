@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Build outputs
+dist/
+build/
+*.js
+*.js.map
+*.d.ts
+*.d.ts.map
+.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+migrations/*.sql
+!migrations/.gitkeep
+drizzle/
+
+# Backups
+backups/
+*.backup
+*.dump
+
+# Models (for Llama)
+models/
+*.gguf
+*.bin
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# Cache
+.cache/
+.parcel-cache/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Project specific
+test-*.ts
+test-*.mts
+test-*.mjs
+verify-*.ts
+add-*.ts
+delete-*.ts
+fix-*.ts
+check-*.ts
+db-test.ts
+simple-test.ts
+*.test.ts
+*.spec.ts

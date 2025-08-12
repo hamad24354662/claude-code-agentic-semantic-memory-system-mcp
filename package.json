@@ -1,0 +1,60 @@
+{
+  "name": "agentic-memory-mcp",
+  "version": "2.0.0",
+  "description": "MCP server providing semantic memory capabilities for Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist src/**/*.js",
+    "start": "node dist/index.js",
+    "mcp:dev": "tsx src/index.ts",
+    "mcp:start": "./run-server.sh",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio",
+    "test": "tsx src/test/test-all-features.ts",
+    "test:memory": "tsx src/test/test-memory-operations.ts",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "memory",
+    "semantic-search",
+    "ai",
+    "embeddings"
+  ],
+  "author": "Tristan McInnis",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.2",
+    "@neondatabase/serverless": "^0.9.5",
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.38.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "drizzle-kit": "^0.30.1",
+    "eslint": "^9.18.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "optionalDependencies": {
+    "node-llama-cpp": "^3.5.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/agentic-memory-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/agentic-memory-mcp/issues"
+  }
+}
